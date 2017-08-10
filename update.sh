@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-6 centos-7 fedora-25"
+RPM_PLATFORMS="centos-6 centos-7 fedora-25 fedora-26"
 DEB_PLATFORMS="debian-9 ubuntu-16.04"
-VERSIONS="2.0.2"
+VERSIONS="2.0.3"
 
 #On Linux, docker still requires sudo
 docker="sudo docker"
@@ -52,3 +52,4 @@ tree -L 1 -I index -T "OpenCPU Server Archive" -dH . > index.html
 git add .
 git commit -a --amend -m "Update ${VERSIONS} at $(date)" --date="now"
 git push -f origin gh-pages
+
