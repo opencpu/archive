@@ -3,7 +3,7 @@ set -e
 
 RPM_PLATFORMS="centos-6 centos-7 fedora-25 fedora-26"
 DEB_PLATFORMS="debian-9 ubuntu-16.04"
-VERSIONS="2.0.3"
+VERSIONS="2.0.4"
 
 #On Linux, docker still requires sudo
 docker="sudo docker"
@@ -49,7 +49,7 @@ done
 tree -L 1 -I index -T "OpenCPU Server Archive" -dH . > index.html
 
 # Commit and deploy YOLO
-git add .
-git commit -a --amend -m "Update ${VERSIONS} at $(date)" --date="now"
-git push -f origin gh-pages
+#git add .
+#git commit -a --amend -m "Update ${VERSIONS} at $(date)" --date="now"
+#git push -f origin gh-pages
 
