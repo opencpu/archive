@@ -3,7 +3,7 @@ set -e
 
 RPM_PLATFORMS="centos-6 centos-7 fedora-25 fedora-26"
 DEB_PLATFORMS="debian-9 ubuntu-16.04"
-VERSIONS="2.0.4"
+VERSIONS="2.0.5"
 
 #On Linux, docker still requires sudo
 docker="sudo docker"
