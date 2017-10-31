@@ -3,7 +3,7 @@ set -e
 
 RPM_PLATFORMS="centos-6 centos-7 fedora-25 fedora-26"
 DEB_PLATFORMS="debian-9 ubuntu-16.04"
-VERSIONS="2.0.5"
+VERSIONS="2.0.6"
 
 # On Linux, you need to add user to the 'docker' group (or use sudo)
 # https://docs.docker.com/engine/installation/linux/linux-postinstall/
