@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-6 centos-7 fedora-25 fedora-26"
+RPM_PLATFORMS="centos-6 centos-7 fedora-26 fedora-27"
 DEB_PLATFORMS="debian-9 ubuntu-16.04"
 VERSIONS="2.0.6"
 
