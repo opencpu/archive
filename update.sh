@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-6 centos-7 fedora-27 fedora-28"
-DEB_PLATFORMS="debian-9 ubuntu-16.04 ubuntu-18.04"
-VERSIONS="2.0.8"
+RPM_PLATFORMS="centos-6 centos-7 fedora-28 fedora-29"
+DEB_PLATFORMS="ubuntu-16.04 ubuntu-18.04"
+VERSIONS="2.1.0"
 
 # On Linux, you need to add user to the 'docker' group (or use sudo)
 # https://docs.docker.com/engine/installation/linux/linux-postinstall/
