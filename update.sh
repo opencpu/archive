@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-6 centos-7 fedora-28 fedora-29"
-DEB_PLATFORMS="ubuntu-16.04 ubuntu-18.04"
-VERSIONS="2.1.0"
+RPM_PLATFORMS="centos-6 centos-7 fedora-29 fedora-30"
+DEB_PLATFORMS="ubuntu-16.04 ubuntu-18.04 debian-9 debian-10"
+VERSIONS="latest"
 
 # On Linux, you need to add user to the 'docker' group (or use sudo)
 # https://docs.docker.com/engine/installation/linux/linux-postinstall/
@@ -12,13 +12,12 @@ $docker --version
 
 for version in ${VERSIONS}
 do
-	tag="v${version}"
+	tag="${version}"
 	for target in ${RPM_PLATFORMS}
 	do
 		$docker pull opencpu/${target}:${tag}
 		$docker run --name ${target} opencpu/${target}:${tag} echo "started ${target}"
 		mkdir -p ./${target}
-		rm -f ./${target}/opencpu-*-${version}-*.rpm
 		$docker cp ${target}:/root/RPMS/x86_64 .
 		chown -R $USER *
 		cp -Rf x86_64/* ${target}/
@@ -37,7 +36,6 @@ do
 		$docker cp ${target}:/home/builder .
 		chown -R $USER *
 		mkdir -p ./${target}
-		rm -f ./${target}/opencpu-*-${version}-*.rpm
 		cp -f ./builder/opencpu-server_*.deb ./builder/opencpu-lib_*.deb ./${target}/
 		rm -Rf ./builder
 		$docker stop ${target}
