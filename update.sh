@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-6 centos-7 fedora-29 fedora-30"
-DEB_PLATFORMS="ubuntu-16.04 ubuntu-18.04 debian-9 debian-10"
+RPM_PLATFORMS="centos-7 centos-8 fedora-30 fedora-31"
+DEB_PLATFORMS="ubuntu-18.04 debian-9 debian-10"
 VERSIONS="latest"
 
 # On Linux, you need to add user to the 'docker' group (or use sudo)
