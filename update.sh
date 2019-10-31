@@ -22,7 +22,7 @@ do
 		chown -R $USER *
 		cp -Rf x86_64/* ${target}/
 		rm -Rf x86_64
-		rm -Rf ./${target}/*-debuginfo-*.rpm ./${target}/opencpu-2.*.rpm ./${target}/repodata
+		rm -Rf ./${target}/*-debuginfo-*.rpm ./${target}/*-debugsource-*.rpm ./${target}/opencpu-2.*.rpm ./${target}/repodata
 		$docker stop ${target}
 		$docker rm ${target}
 		$docker rmi opencpu/${target}:${tag}
