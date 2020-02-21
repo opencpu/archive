@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-RPM_PLATFORMS="centos-7 centos-8 fedora-30 fedora-31"
+RPM_PLATFORMS="centos-6 centos-7 centos-8 fedora-30 fedora-31"
 DEB_PLATFORMS="ubuntu-18.04 debian-9 debian-10"
 VERSIONS="latest"
 
